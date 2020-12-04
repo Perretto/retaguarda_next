@@ -1,5 +1,7 @@
 const withCSS = require('@zeit/next-css')
-module.exports = withCSS({
-  /* config options here */
-});
- 
+
+const withImages = require('next-images') 
+module.exports = withCSS(withImages({images: {
+  domains: ['www.octoplex.com.br'],
+},
+}));

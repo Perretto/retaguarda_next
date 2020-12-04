@@ -15,6 +15,10 @@ import "../vendor/slick/slick.css"
 import "../vendor/select2/select2.min.css"
 import "../vendor/perfect-scrollbar/perfect-scrollbar.css"
 import "../node_modules/izitoast/dist/css/iziToast.min.css"   
+import "../js/login.js"
+
+import Image from 'next/image'
+
 function Login(){
     return (
         
@@ -34,27 +38,24 @@ function Login(){
                         <div className="login-wrap">
                             <div className="login-content">
                                 <div className="login-logo">  
-                                 
+                                <Image src="http://www.octoplex.com.br/images/icon/logo.png" width={200}  height={50} />
                                     <div className=" ">
-                                        <div className="form-group">
+                                        <div className="form-group"  style={{textAlign: 'left'}}>
                                             <label>CNPJ</label>
                                             <input id="cnpj" className="au-input au-input--full" type="text" name="cnpj" placeholder="CNPJ"/>
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group" style={{textAlign: 'left'}}>
                                             <label>Login</label>
                                             <input id="login" className="au-input au-input--full" type="text" name="login" placeholder="Login"/>
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group" style={{textAlign: 'left'}}>
                                             <label>Senha</label>
                                             <input id="senha" className="au-input au-input--full" type="password" name="senha"
                                                 placeholder="Senha"/>
                                         </div>
 
-                                        <button   className="btn btn-theme btn-block" href="index.html" type="button"><i className="fa fa-lock"></i> ENTRAR</button>
+                                        <button onClick={() => { console.log("cliquei"); }}  className="btn btn-theme btn-block" href="index.html" type="button"><i className="fa fa-lock"></i> ENTRAR</button>
                                         
-
-
-
                                     </div>
                                 </div>
                                 
