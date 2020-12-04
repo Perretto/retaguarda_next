@@ -7,7 +7,7 @@ import "../vendor/mdi-font/css/material-design-iconic-font.css"
 
 import "../vendor/bootstrap-4.1/bootstrap.min.css"
 
-import "../vendor/animsition/animsition.min.css"
+//import "../vendor/animsition/animsition.min.css"
 import "../vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
 import "../vendor/wow/animate.css"
 import "../vendor/css-hamburgers/hamburgers.min.css"
