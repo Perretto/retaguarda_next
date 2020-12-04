@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head'; 
 import "../css/theme.css";
-import "../vendor/font-awesome-5/css/fontawesome-all.css"
+import "../vendor/font-awesome-5/css/fontawesome-all.min.css"
 import "../vendor/font-awesome-4.7/css/font-awesome.css"
 import "../vendor/mdi-font/css/material-design-iconic-font.css"
 
