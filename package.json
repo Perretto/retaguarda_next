@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next -p 3005"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/Perretto/retaguarda_next#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "izitoast": "^1.4.0",
     "next": "^10.0.3",
+    "next-images": "^1.6.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

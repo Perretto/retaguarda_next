@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cadastro de produtos</title>
+
+    <link href="../css/font-face.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="../css/style.css" rel="stylesheet" media="all">
+    <link href="../css/theme.css" rel="stylesheet" media="all">
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="../vendor/jquery-3.2.1.min.js"></script>
+    <script src="../vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/izitoast/dist/css/iziToast.min.css">
+
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.min.css">
+    
+
+    <script>if (window.module) module = window.module;</script>
+</head>
+
+<body class="animsition">
+    <div id="topo" class="page-wrapper">
+        <div class="page-content--bgf7">
+            <section class="au-breadcrumb2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb-content">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">Você está no:</span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item active">
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">Produtos</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="row" id="gridsearch"></div>
+            <div id="formtela" class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="au-form-icon--sm" action="" method="post">
+                            <div class="card-title">
+                                <h3 class="text-center title-2">Cadastro de Produtos</h3>
+                            </div>
+                            <hr>
+
+
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active show" id="produto-tab" data-toggle="tab" href="#produto" role="tab" aria-controls="produto" aria-selected="true">Produto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="fiscal-tab" data-toggle="tab" href="#fiscal" role="tab" aria-controls="fiscal" aria-selected="false">Fiscal</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pl-3 p-1" id="myTabContent">
+                                    <div class="tab-pane fade active show" id="produto" role="tabpanel" aria-labelledby="produto-tab">
+                                        <div class="row">
+                                            <input type="hidden" name="id" id="id" class="form-control">
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Lanca</label>
+                                                <input type="number" name="nr_lanca" id="nr_lanca" placeholder="Lanca"
+                                                    class="form-control" disabled="disabled">
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Código</label>
+                                                <input type="text" name="nm_codigo" id="nm_codigo" placeholder="Código"
+                                                    class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class=" form-control-label">Nome</label>
+                                                <input type="text" name="nm_produto" id="nm_produto" placeholder="Nome"
+                                                    class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Valor Compra</label>
+                                                <input type="text" name="nr_vrcompra" id="nr_vrcompra" placeholder="Valor da Compra"
+                                                    class="form-control">
+                                            </div>              
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Lucro</label>
+                                                <input type="text" name="db_lucro" id="db_lucro" placeholder="Lucro"
+                                                    class="form-control">
+                                            </div>                          
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Valor vista</label>
+                                                <input type="text" name="db_vrvista" id="db_vrvista" placeholder="Valor a vista"
+                                                    class="form-control">
+                                            </div>   
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Código ANP</label>
+                                                <input type="text" name="nm_codigoanp" id="nm_codigoanp" placeholder="Código ANP"
+                                                    class="form-control">
+                                            </div>              
+                                        </div>
+                                        <div class="row">                         
+                                                                               
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">CEST</label>
+                                                <input type="text" name="nm_cest" id="nm_cest" placeholder="CEST"
+                                                    class="form-control">
+                                            </div>    
+                                            <div class="form-group col-md-4">
+                                                <div class="col">
+                                                    <label class=" form-control-label">Unidade</label>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <select data-dropdowntable="unidade" data-dropdowntype="0" name="nm_un" id="nm_un" class="form-control">
+                                                        <option value="">Selecione</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                                                     
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Validade</label>
+                                                <input type="text" name="nm_validade" id="nm_validade" placeholder="Validade"
+                                                    class="form-control">
+                                            </div> 
+                                                                     
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Estoque</label>
+                                                <input type="text" name="db_estq" id="db_estq" placeholder="Estoque"
+                                                    class="form-control">
+                                            </div> 
+                                                                                                            
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Valor venda</label>
+                                                <input type="text" name="db_valultvenda" id="db_valultvenda" placeholder="Valor venda"
+                                                    class="form-control">
+                                            </div> 
+                                                  
+                                              
+                                            <div class="form-group col-md-4">
+                                                <div class="col">
+                                                    <label class=" form-control-label">Categoria</label>
+                                                </div>
+                                                <div class="">
+                                                    <select data-dropdowntable="cadgrupro" data-dropdownfunction="listgrupo" name="nr_codgru" id="nr_codgru" class="form-control">
+                                                        <option value="">Selecione</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                              
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Estoque minimo</label>
+                                                <input type="text" name="db_estmin" id="db_estmin" placeholder="Estoque minimo"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Valora</label>
+                                                <input type="text" name="db_valora" id="db_valora" placeholder="Valora"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">Valorb</label>
+                                                <input type="text" name="db_valorb" id="db_valorb" placeholder="Valorb"
+                                                    class="form-control">
+                                            </div> 
+                                                                                         
+                                            <div class="form-group col-md-4">
+                                                <div class="col">
+                                                    <label class=" form-control-label">Fornecedor 1</label>
+                                                </div>
+                                                <div class="">
+                                                    <select data-dropdowntable="clientes" data-dropdownfunction="listfornecedores" name="nr_forn1" id="nr_forn1" class="form-control">
+                                                        <option value="">Selecione</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                                                                    
+                                            <div class="form-group col-md-4">
+                                                <div class="col">
+                                                    <label class=" form-control-label">Fornecedor 2</label>
+                                                </div>
+                                                <div class="">
+                                                    <select data-dropdowntable="clientes" data-dropdownfunction="listfornecedores" name="nr_forn2" id="nr_forn2" class="form-control">
+                                                        <option value="">Selecione</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">Status</label>
+                                                <input type="number" name="nr_status" id="nr_status" placeholder="Status"
+                                                    class="form-control">
+                                            </div> 
+
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">ID Empresa</label>
+                                                <input type="hidden" name="nr_idemp" id="nr_idemp" placeholder="ID Empresa"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">inipromo</label>
+                                                <input type="text" name="nm_inipromo" id="nm_inipromo" placeholder="inipromo"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">fimpromo</label>
+                                                <input type="text" name="nm_fimpromo" id="nm_fimpromo" placeholder="fimpromo"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-2" style="display: none;">
+                                                <label class=" form-control-label">balanca</label>
+                                                <input type="text" name="nm_balanca" id="nm_balanca" placeholder="balanca"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1">
+                                                <label class=" form-control-label">teclab</label>
+                                                <input type="text" name="nm_teclab" id="nm_teclab" placeholder="teclab"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">codcpf</label>
+                                                <input type="text" name="nm_codpf" id="nm_codpf" placeholder="codcpf"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-1" style="display: none;">
+                                                <label class=" form-control-label">impcoz</label>
+                                                <input type="text" name="nm_impcoz" id="nm_impcoz" placeholder="impcoz"
+                                                    class="form-control">
+                                            </div> 
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Data ultima venda</label>
+                                                <input type="text" name="dt_dtultvenda" id="dt_dtultvenda" placeholder="Data ultima venda"
+                                                    class="form-control">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fiscal" role="tabpanel" aria-labelledby="fiscal-tab">
+                                        <div class="row">
+                                            
+                                            <div class="form-group col-md-4">
+                                                <div class="col">
+                                                    <label class=" form-control-label">Origem</label>
+                                                </div>
+                                                <div class="">
+                                                    <select name="nm_origem" id="nm_origem" class="form-control">
+                                                        <option value="">Selecione</option>
+                                                        <option value="0">0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8;</option>
+                                                        <option value="1">1 - Estrangeira - Importação direta, exceto a indicada no código 6;</option>
+                                                        <option value="2">2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;</option>
+                                                        <option value="3">3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento);</option>
+                                                        <option value="4">4 - Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07;</option>
+                                                        <option value="5">5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento);</option>
+                                                        <option value="6">6 - Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX e gás natural;</option>
+                                                        <option value="7">7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX e gás natural;</option>
+                                                        <option value="8">8 - Nacional - Mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento).</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                                                           
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CFOP</label>
+                                                <input type="text" name="nm_cfop" id="nm_cfop" placeholder="CFOP"
+                                                    class="form-control">
+                                            </div> 
+                                                                
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">NCM</label>
+                                                <input type="text" name="nm_ncm" id="nm_ncm" placeholder="NCM"
+                                                    class="form-control">
+                                            </div> 
+                                                                                                    
+                                            
+                                                          
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CST ICMS</label>
+                                                <input type="text" name="nm_cst_icms" id="nm_cst_icms" placeholder="CST ICMS"
+                                                    class="form-control">
+                                            </div> 
+                                                    
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Aliq. ICMS</label>
+                                                <input type="text" name="db_aliq_icms" id="db_aliq_icms" placeholder="Aliq. ICMS"
+                                                    class="form-control">
+                                            </div> 
+                                                
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CSOSN</label>
+                                                <input type="text" name="nm_csosn" id="nm_csosn" placeholder="CSOSN"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CST IPI</label>
+                                                <input type="text" name="nm_cst_ipi" id="nm_cst_ipi" placeholder="CST IPI"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Aliq. IPI</label>
+                                                <input type="text" name="db_aliq_ipi" id="db_aliq_ipi" placeholder="Aliq. IPI"
+                                                    class="form-control">
+                                            </div> 
+
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CST Pis</label>
+                                                <input type="text" name="nm_cst_pis" id="nm_cst_pis" placeholder="CST Pis"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Aliq. Pis</label>
+                                                <input type="text" name="db_aliq_pis" id="db_aliq_pis" placeholder="Aliq. Pis"
+                                                    class="form-control">
+                                            </div> 
+
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">CST Cofins</label>
+                                                <input type="text" name="nm_cst_cofins" id="nm_cst_cofins" placeholder="CST Cofins"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Aliq. Cofins</label>
+                                                <input type="text" name="db_aliq_cofins" id="db_aliq_cofins" placeholder="Aliq. Cofins"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Código Sefaz</label>
+                                                <input type="text" name="nm_codigosefaz" id="nm_codigosefaz" placeholder="Código Sefaz"
+                                                    class="form-control">
+                                            </div> 
+                                            
+                                            <div class="form-group col-md-2">
+                                                <label class=" form-control-label">Aliq. IBPT</label>
+                                                <input type="text" name="db_ibptaliq" id="db_ibptaliq" placeholder="Aliq. IBPT"
+                                                    class="form-control">
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            
+
+                            
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <button onclick="novo()" type="button" class="btn btn-outline-primary">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button onclick="save('produtos')" type="button" class="btn btn-outline-success">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <button onclick="deleteP('produtos')" type="button" class="btn btn-outline-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                    <button onclick="createtable('produtos')" type="button"
+                                        class="btn btn-outline-warning">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../vendor/jquery-3.2.1.min.js"></script>
+    <script src="../vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="../vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="../vendor/slick/slick.min.js"></script>
+    <script src="../vendor/wow/wow.min.js"></script>
+    <script src="../vendor/animsition/animsition.min.js"></script>
+    <script src="../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="../vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="../vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="../vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="../vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="../vendor/select2/select2.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../generic/save.js"></script>
+    <script src="../generic/table.js"></script>
+    <script src="../js/generic.js"></script>
+    <script src="../js/produtos.js"></script>
+    <script src="../jquery-base64-master/jquery.base64.min.js"></script>
+    <script src="../../node_modules/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
+    <script src="../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+
+</body>
+
+</html>
