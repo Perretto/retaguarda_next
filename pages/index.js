@@ -10,7 +10,7 @@ function Page() {
                     </>}
                     {session && <>
                     Você esta logado como {session.user.email} <br/> 
-                    <button onClick={() => signOut('auth0')}>Deslogar</button>
+                    <button onClick={() => signOut()}>Deslogar</button>
                     </>}      
             </div>);
 }
