@@ -10,7 +10,6 @@ const options = {
         domain: process.env.AUTH0_DOMAIN
       })
   ]
-
 }
 
 export default (req, res) => NextAuth(req, res, options)
