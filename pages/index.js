@@ -1,13 +1,18 @@
-import Link from 'next/link'
+import React from 'react'
+import { signIn, signOut, useSession } from 'next-auth/client'
 
-function Home(){
-    return (<div>
-                <h1>Home</h1>
-                
-                <Link href="/sobre">
-                    <a>Acessar página Sobre</a>
-                </Link>
-            </div>)
+function Page() {
+        const [ session, loading ] = useSession()
+        return (<div> 
+                    {!session && <>
+                    Você não esta logado <br/>
+                    <button onClick={() => signIn('auth0')}>Logar</button>
+                    </>}
+                    {session && <>
+                    Você esta logado como {session.user.email} <br/> 
+                    <button onClick={() => signOut('auth0')}>Deslogar</button>
+                    </>}      
+            </div>);
 }
 
-export default Home
+export default Page
